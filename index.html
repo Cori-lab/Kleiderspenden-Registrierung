@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <!-- Eigene Styledatei -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Kleiderspenden Registrierung</title>
   </head>
 
@@ -72,17 +72,91 @@
           </p>
         </div>
       </section>
-      <section id="spende">
+      <section id="spende" class="py-5">
         <div class="container">
+          <h2>Spende registrieren</h2>
+
           <!-- Spendenformular -->
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto
-            perspiciatis eaque corporis, voluptatum qui minima maiores saepe,
-            sapiente, exercitationem culpa quo at adipisci neque dolorum.
-            Mollitia exercitationem voluptate quasi!
-          </p>
+          <form>
+            <!-- Übergabeart -->
+            <div class="mb-4">
+              <label class="form-label">Übergabeart</label>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="uebergabe"
+                  id="vorOrt"
+                />
+                <label class="form-check-label" for="vorOrt">
+                  Übergabe an der Geschäftsstelle
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="uebergabe"
+                  id="abholung"
+                />
+                <label class="form-check-label" for="abholung">
+                  Abholung durch Sammelfahrzeug
+                </label>
+              </div>
+            </div>
+
+            <!-- Kleidung -->
+            <div class="mb-4">
+              <label class="form-label">Art der Kleidung</label>
+              <select class="form-select">
+                <option selected>Bitte auswählen</option>
+                <option>Jacken</option>
+                <option>T-Shirts</option>
+                <option>Hemden</option>
+                <option>Hosen</option>
+                <option>Kleider</option>
+                <option>Röcke</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label">Anzahl der Kleidungsstücke</label>
+              <input type="number" class="form-control" min="1" />
+            </div>
+
+            <!-- Krisengebiet -->
+            <div class="mb-4">
+              <label class="form-label">Krisengebiet</label>
+              <select id="krisengebiete" class="form-select">
+                <option selected>Bitte auswählen</option>
+              </select>
+            </div>
+
+            <!-- Adresse -->
+            <div id="adressbereich" class="mb-4">
+              <h5>Abholadresse</h5>
+              <input
+                type="text"
+                class="form-control mb-2"
+                placeholder="Straße und Hausnummer"
+              />
+              <input
+                type="text"
+                class="form-control mb-2"
+                placeholder="Postleitzahl"
+              />
+              <input type="text" class="form-control" placeholder="Ort" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Registrierung abschließen
+            </button>
+          </form>
         </div>
       </section>
+
       <section id="bestaetigung" hidden>
         <div class="container">
           <!-- Bestätigungsansicht -->
@@ -104,6 +178,6 @@
     ></script>
     <!-- Eigenes JavaScript -->
     <script src="js/validation.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>
