@@ -100,6 +100,7 @@
                   type="radio"
                   name="uebergabe"
                   id="abholung"
+                  checked
                 />
                 <label class="form-check-label" for="abholung">
                   Abholung durch Sammelfahrzeug
@@ -110,7 +111,7 @@
             <!-- Kleidung -->
             <div class="mb-4">
               <label class="form-label">Art der Kleidung</label>
-              <select class="form-select">
+              <select class="form-select" required>
                 <option selected>Bitte auswählen</option>
                 <option>Jacken</option>
                 <option>T-Shirts</option>
@@ -122,32 +123,61 @@
             </div>
 
             <div class="mb-4">
-              <label class="form-label">Anzahl der Kleidungsstücke</label>
-              <input type="number" class="form-control" min="1" />
+              <label class="form-label" required
+                >Anzahl der Kleidungsstücke</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                min="1"
+                placeholder="1"
+              />
             </div>
 
             <!-- Krisengebiet -->
             <div class="mb-4">
-              <label class="form-label">Krisengebiet</label>
-              <select id="krisengebiete" class="form-select">
+              <label class="form-label" required>Krisengebiet</label>
+              <select id="krisengebiete" class="form-select" required>
                 <option selected>Bitte auswählen</option>
               </select>
             </div>
 
-            <!-- Adresse -->
-            <div id="adressbereich" class="mb-4">
+            <!-- Name (optional) -->
+            <div class="mb-4">
+              <label for="name" class="form-label">Vor- und Nachname</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Max Mustermann"
+              />
+            </div>
+
+            <!-- Adressbereich bei Abholung -->
+            <div id="adressbereich" class="mb-4" d-none>
               <h5>Abholadresse</h5>
+              <label>Straße und Hausnummer</label>
               <input
                 type="text"
                 class="form-control mb-2"
-                placeholder="Straße und Hausnummer"
+                placeholder="Musterstraße 12"
               />
+              <label>Postleitzahl</label>
               <input
                 type="text"
                 class="form-control mb-2"
-                placeholder="Postleitzahl"
+                id="plz"
+                placeholder="12345"
               />
-              <input type="text" class="form-control" placeholder="Ort" />
+              <div id="plzFeedback" class="invalid-feedback">
+                Abholung in diesem Gebiet ist leider nicht möglich.
+              </div>
+              <label>Ort</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Musterstadt"
+              />
             </div>
 
             <button type="submit" class="btn btn-primary">
