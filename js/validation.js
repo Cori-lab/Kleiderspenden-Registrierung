@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const plz = plzInput.value;
 
-    if (plz.length >= 2) {
+    if (plz.length >= 1) {
       const prefix = plz.substring(0, 2);
 
       if (prefix !== geschaeftsstellenPLZPrefix) {
