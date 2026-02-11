@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const vorOrt = document.getElementById("vorOrt");
   const abholung = document.getElementById("abholung");
+  const nameInput = document.getElementById("name");
   const strasseInput = document.getElementById("strasse");
   const plzInput = document.getElementById("plz");
   const ortInput = document.getElementById("ort");
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (abholung.checked) {
       adressbereich.classList.remove("d-none");
 
+    nameInput.required = true;
     strasseInput.required = true;
     plzInput.required = true;
     ortInput.required = true;
@@ -26,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       adressbereich.classList.add("d-none");
 
+    nameInput.required = false;
     strasseInput.required = false;
     plzInput.required = false;
     ortInput.required = false;
