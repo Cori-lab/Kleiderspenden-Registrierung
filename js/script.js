@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const vorOrt = document.getElementById("vorOrt");
   const abholung = document.getElementById("abholung");
+  const strasseInput = document.getElementById("strasse");
+  const plzInput = document.getElementById("plz");
+  const ortInput = document.getElementById("ort");
   const adressbereich = document.getElementById("adressbereich");
 
   const select = document.getElementById("krisengebiete");
@@ -15,8 +18,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateAdressbereich() {
     if (abholung.checked) {
       adressbereich.classList.remove("d-none");
+
+    strasseInput.required = true;
+    plzInput.required = true;
+    ortInput.required = true;
+
     } else {
       adressbereich.classList.add("d-none");
+
+    strasseInput.required = false;
+    plzInput.required = false;
+    ortInput.required = false;
+    
     }
   }
 
