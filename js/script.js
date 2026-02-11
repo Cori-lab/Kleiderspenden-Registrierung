@@ -78,6 +78,10 @@ const uebergabeart = abholung.checked
   ? "Abholung durch Sammelfahrzeug"
   : "Übergabe an der Geschäftsstelle";
 
+  const jetzt = new Date();
+  document.getElementById("confirmDatum").textContent =
+  jetzt.toLocaleString("de-DE");
+
 document.getElementById("confirmUebergabe").textContent = uebergabeart;
 document.getElementById("confirmGebiet").textContent = gebiet;
 document.getElementById("confirmKleidung").textContent = kleidung;
