@@ -49,12 +49,13 @@ fetch("data/krisengebiete.json")
     
     data.forEach(region => {
       const option = document.createElement("option");
+      option.value = region;
       option.textContent = region;
       select.appendChild(option);
     });
   });
 
-  // Formular prüfen
+// Formular prüfen
   formular.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -63,8 +64,38 @@ fetch("data/krisengebiete.json")
       return;
     }
 
-    spendeBereich.style.display = "none";
-    bestaetigung.hidden = false;
-  });
+  // Formulardaten sammeln
+const kleidung = document.querySelector(".form-select").value;
+const anzahl = document.querySelector('input[type="number"]').value;
+const selectGebiet = document.getElementById("krisengebiete");
+const gebiet = selectGebiet.options[selectGebiet.selectedIndex].text;
+const name = document.getElementById("name").value;
+const strasse = document.getElementById("strasse").value;
+const plz = document.getElementById("plz").value;
+const ort = document.getElementById("ort").value;
 
-});
+const uebergabeart = abholung.checked
+  ? "Abholung durch Sammelfahrzeug"
+  : "Übergabe an der Geschäftsstelle";
+
+document.getElementById("confirmUebergabe").textContent = uebergabeart;
+document.getElementById("confirmGebiet").textContent = gebiet;
+document.getElementById("confirmKleidung").textContent = kleidung;
+document.getElementById("confirmAnzahl").textContent = anzahl;
+document.getElementById("confirmName").textContent = name || "nicht angegeben";
+    
+  // Adresse nur bei Abholung anzeigen
+if (abholung.checked) {
+  document.getElementById("confirmAdresse").textContent =
+    `${strasse}, ${plz} ${ort}`;
+} else {
+  document.getElementById("confirmAdresse").textContent =
+    "Übergabe vor Ort";
+}
+
+  // Bestätigung anzeigen
+spendeBereich.style.display = "none";
+bestaetigung.hidden = false;
+
+  });
+   });
