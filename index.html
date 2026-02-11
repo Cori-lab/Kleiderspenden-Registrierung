@@ -77,7 +77,7 @@
           <h2>Spende registrieren</h2>
 
           <!-- Spendenformular -->
-          <form>
+          <form id="spendenFormular">
             <!-- Übergabeart -->
             <div class="mb-4">
               <label class="form-label">Übergabeart</label>
@@ -88,6 +88,7 @@
                   type="radio"
                   name="uebergabe"
                   id="vorOrt"
+                  checked
                 />
                 <label class="form-check-label" for="vorOrt">
                   Übergabe an der Geschäftsstelle
@@ -100,7 +101,6 @@
                   type="radio"
                   name="uebergabe"
                   id="abholung"
-                  checked
                 />
                 <label class="form-check-label" for="abholung">
                   Abholung durch Sammelfahrzeug
@@ -154,7 +154,7 @@
             </div>
 
             <!-- Adressbereich bei Abholung -->
-            <div id="adressbereich" class="mb-4" d-none>
+            <div id="adressbereich" class="mb-4 d-none">
               <h5>Abholadresse</h5>
               <label>Straße und Hausnummer</label>
               <input
@@ -168,6 +168,9 @@
                 class="form-control mb-2"
                 id="plz"
                 placeholder="12345"
+                minlength="5"
+                maxlength="5"
+                pattern="[0-9]{5}"
               />
               <div id="plzFeedback" class="invalid-feedback">
                 Abholung in diesem Gebiet ist leider nicht möglich.
@@ -190,6 +193,8 @@
       <section id="bestaetigung" hidden>
         <div class="container">
           <!-- Bestätigungsansicht -->
+          <h2>Vielen Dank für Ihre Spende!</h2>
+          <p>Ihre Registrierung wurde erfolgreich abgeschlossen.</p>
         </div>
       </section>
     </main>
