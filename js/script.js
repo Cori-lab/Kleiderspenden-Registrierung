@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // Sanitizer
+  function sanitizer(value) {
+  return value
+    .trim()
+    .replace(/[<>]/g, "");
+  }
+
   // Elemente sammeln
   const formular = document.getElementById("spendenFormular");
   const spendeBereich = document.getElementById("spende");
@@ -69,15 +76,16 @@ const kleidung = document.querySelector(".form-select").value;
 const anzahl = document.querySelector('input[type="number"]').value;
 const selectGebiet = document.getElementById("krisengebiete");
 const gebiet = selectGebiet.options[selectGebiet.selectedIndex].text;
-const name = document.getElementById("name").value;
-const strasse = document.getElementById("strasse").value;
+const name = sanitizer(document.getElementById("name").value);
+const strasse = sanitizer(document.getElementById("strasse").value);
 const plz = document.getElementById("plz").value;
-const ort = document.getElementById("ort").value;
+const ort = sanitizer(document.getElementById("ort").value);
 
 const uebergabeart = abholung.checked
   ? "Abholung durch Sammelfahrzeug"
   : "Übergabe an der Geschäftsstelle";
 
+  // Datum und Uhrzeit anzeigen
   const jetzt = new Date();
   document.getElementById("confirmDatum").textContent =
   jetzt.toLocaleString("de-DE");
@@ -101,5 +109,18 @@ if (abholung.checked) {
 spendeBereich.style.display = "none";
 bestaetigung.hidden = false;
 
+// neue Spende erfassen
+const neueSpendeBtn = document.getElementById("neueSpende");
+
+neueSpendeBtn.addEventListener("click", function () {
+  formular.reset();
+
+  bestaetigung.hidden = true;
+  spendeBereich.style.display = "block";
+
+  updateAdressbereich();
+});
   });
    });
+
+  
