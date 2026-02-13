@@ -1,12 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Sanitizer
-  function sanitizer(value) {
-  return value
-    .trim()
-    .replace(/[<>]/g, "");
-  }
-
   // Elemente sammeln
   const formular = document.getElementById("spendenFormular");
   const spendeBereich = document.getElementById("spende");
@@ -14,13 +7,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const vorOrt = document.getElementById("vorOrt");
   const abholung = document.getElementById("abholung");
+  const adressbereich = document.getElementById("adressbereich");
+
   const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
   const strasseInput = document.getElementById("strasse");
   const plzInput = document.getElementById("plz");
   const ortInput = document.getElementById("ort");
-  const adressbereich = document.getElementById("adressbereich");
-
+  
   const select = document.getElementById("krisengebiete");
+  const neueSpendeBtn = document.getElementById("neueSpende");
+
+    // Sanitizer Hilfsfunktion
+  function sanitizer(value) {
+  return value
+    .trim()
+    .replace(/[<>]/g, "");
+  }
 
   // Adressbereich ein- und ausblenden
   function updateAdressbereich() {
@@ -77,6 +80,7 @@ const anzahl = document.querySelector('input[type="number"]').value;
 const selectGebiet = document.getElementById("krisengebiete");
 const gebiet = selectGebiet.options[selectGebiet.selectedIndex].text;
 const name = sanitizer(document.getElementById("name").value);
+const email = sanitizer(document.getElementById("email").value);
 const strasse = sanitizer(document.getElementById("strasse").value);
 const plz = document.getElementById("plz").value;
 const ort = sanitizer(document.getElementById("ort").value);
@@ -94,6 +98,7 @@ document.getElementById("confirmUebergabe").textContent = uebergabeart;
 document.getElementById("confirmGebiet").textContent = gebiet;
 document.getElementById("confirmKleidung").textContent = kleidung;
 document.getElementById("confirmAnzahl").textContent = anzahl;
+document.getElementById("confirmEmail").textContent = email;
 document.getElementById("confirmName").textContent = name || "nicht angegeben";
     
   // Adresse nur bei Abholung anzeigen
@@ -110,8 +115,6 @@ spendeBereich.style.display = "none";
 bestaetigung.hidden = false;
 
 // neue Spende erfassen
-const neueSpendeBtn = document.getElementById("neueSpende");
-
 neueSpendeBtn.addEventListener("click", function () {
   formular.reset();
 
