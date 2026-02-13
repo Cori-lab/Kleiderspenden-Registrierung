@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Eigene Styledatei -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Der Verein</title>
+  </head>
+
+  <body>
+    <!-- Header + Navigation -->
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <img src="data/logo.svg" alt="Netzwerk Kleidungshilfe" class="logo" />
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#start">Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#spende">Spende registrieren</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/verein.html">Der Verein</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/impressum-datenschutz.html">
+                  Impressum & Datenschutz
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="my-4">Impressum & Datenschutz</h1>
+      </div>
+      <section id="start" class="py-5">
+        <div class="container">
+          <h2>Impressum</h2>
+          <p>
+            Netzwerk Kleidungshilfe e.V. Musterstraße 12 50667 Köln Deutschland
+            Telefon: 0221 000000 E-Mail: info@netzwerk-kleidungshilfe.de
+
+            <strong>Hinweis:</strong>
+            Bei dieser Website handelt es sich um eine fiktive Organisation im
+            Rahmen eines Studienprojekts. Alle dargestellten Inhalte dienen
+            ausschließlich Demonstrationszwecken.
+          </p>
+          <h2>Datenschutz</h2>
+          <p>
+            Im Rahmen dieser Webanwendung werden eingegebene Daten
+            ausschließlich lokal verarbeitet und nicht dauerhaft gespeichert
+            oder an Dritte weitergegeben. Die eingegebenen Informationen dienen
+            lediglich der Demonstration der Funktionsweise der Anwendung. Es
+            erfolgt keine serverseitige Speicherung personenbezogener Daten.
+            Nach dem Neuladen der Seite werden alle eingegebenen Daten
+            verworfen. Da es sich um ein Studienprojekt handelt, werden keine
+            Tracking- oder Analysewerkzeuge eingesetzt.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        © Gemeinnütziger Verein –
+        <a href="pages/impressum-datenschutz.html">Impressum & Datenschutz</a>
+      </div>
+    </footer>
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Eigenes JavaScript -->
+    <script src="js/validation.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
