@@ -5,4 +5,12 @@ body {
 .logo {
     height: 4em;
     width: auto;
+
+html {
+  scroll-behavior: smooth;
+}
+
+}
+section {
+  scroll-margin-top: 90px;
 }

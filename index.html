@@ -58,18 +58,15 @@
 
     <main>
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 col-md-11">
             <h1 class="my-4">Kleiderspenden-Registrierung</h1>
           </div>
-        </div>
-      </div>
 
       <section id="start" class="py-5">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10 col-md-11">
-              <!-- Einleitung -->
+          <div class="row align-items-top">
+
+<!-- Einleitungstext -->
+          <div class="col-lg-7">
               <h2 class="mb-4">Projektvorstellung</h2>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et
@@ -78,8 +75,18 @@
                 dolorum. Mollitia exercitationem voluptate quasi!
               </p>
             </div>
-          </div>
-        </div>
+
+<!-- Bild -->
+       <div class="col-lg-5 d-none d-lg-block">
+        <img
+          src="data/bild_start.jpg"
+          alt="Kleiderspenden"
+          class="img-fluid rounded"
+        />
+      </div>
+
+            </div>
+            </div>
       </section>
 
       <!-- Spendenformular -->
@@ -253,25 +260,37 @@
         </div>
       </section>
 
-        <section id="bestaetigung" hidden>
+<!-- Bestätigungsansicht -->
+        <section id="bestaetigung" class="py-5" hidden>
         <div class="container">
-          <!-- Bestätigungsansicht -->
-          <h2>Vielen Dank für Ihre Spende!</h2>
-          <p>Ihre Registrierung wurde erfolgreich abgeschlossen.</p>
-          <p>
-            <strong>Registrierung am: </strong><span id="confirmDatum"></span>
-          </p>
-          <p>
-            <strong>Übergabeart:</strong> <span id="confirmUebergabe"></span>
-          </p>
-          <p>
-            <strong>Art der Kleidung:</strong><span id="confirmKleidung"></span>
-          </p>
-          <p><strong>Anzahl:</strong> <span id="confirmAnzahl"></span></p>
-          <p><strong>Krisengebiet:</strong> <span id="confirmGebiet"></span></p>
-          <p><strong>E-Mail:</strong> <span id="confirmEmail"></span></p>
-          <p><strong>Name:</strong> <span id="confirmName"></span></p>
-          <p><strong>Adresse:</strong> <span id="confirmAdresse"></span></p>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h2 class="card-title text-success mb-4">Ihre Spende wurde erfolgreich registriert</h2>
+                <p class="text-muted mb-4">Vielen Dank für Ihre Spende! Die folgenden Daten wurden erfasst:</p>
+                <p>
+
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">
+                 <strong>Registrierung am: </strong><span id="confirmDatum"></span></li>
+               <li class="list-group-item">
+                <strong>Übergabeart:</strong> <span id="confirmUebergabe"></span></li>
+              <li class="list-group-item">
+                <strong>Art der Kleidung:</strong><span id="confirmKleidung"></span></li>
+              <li class="list-group-item">
+               <strong>Anzahl:</strong> <span id="confirmAnzahl"></span></li>
+             <li class="list-group-item">
+              <strong>Krisengebiet:</strong> <span id="confirmGebiet"></span></li>
+            <li class="list-group-item">
+              <strong>E-Mail:</strong> <span id="confirmEmail"></span></li>
+            <li class="list-group-item">
+              <strong>Name:</strong> <span id="confirmName"></span></li>
+            <li class="list-group-item">
+              <strong>Adresse:</strong> <span id="confirmAdresse"></span></li>
+          </ul>
+
           <button type="button" id="neueSpende" class="btn btn-secondary mt-3">
             Neue Spende registrieren
           </button>
