@@ -20,11 +20,12 @@
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <img
-            src="../data/logo.svg"
-            alt="Netzwerk Kleidungshilfe"
-            class="logo"
-          />
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="../data/logo.svg"
+              alt="Netzwerk Kleidungshilfe"
+              class="logo"
+          /></a>
 
           <button
             class="navbar-toggler"
@@ -63,32 +64,57 @@
     </header>
 
     <main>
-      <div class="container">
-        <h1 class="my-4">Der Verein</h1>
-      </div>
-      <section id="start" class="py-5">
+      <!-- Titelbereich -->
+      <section class="pt-4 mb-3">
         <div class="container">
-          <h2>Der Verein stellt sich vor</h2>
-          <p>
-            Der Verein <strong>Netzwerk Kleidungshilfe e.V.</strong> engagiert
-            sich für die Sammlung, Sortierung und Verteilung von Kleiderspenden
-            an Menschen in Krisen- und Notsituationen. Unser Ziel ist es,
-            schnell und unbürokratisch Hilfe zu leisten und gleichzeitig
-            Transparenz über den Weg der Spenden zu schaffen. Die gespendeten
-            Kleidungsstücke werden in der Geschäftsstelle gesammelt, geprüft und
-            anschließend bedarfsgerecht an Partnerorganisationen in ausgewählten
-            Krisenregionen weitergeleitet. Neben der Annahme von Spenden vor Ort
-            organisiert der Verein auch regelmäßige Sammelfahrten, um die Abgabe
-            für Spendende zu erleichtern. Wir freuen uns auf Ihre Spende.
-          </p>
+          <h1>Der Verein</h1>
+        </div>
+      </section>
+
+      <!-- Einleitung -->
+      <section id="start" class="hero-intro">
+        <div class="container">
+          <div class="row align-items-top">
+            <!-- Einleitungstext -->
+            <div class="col-lg-7">
+              <h2 class="hero-subtitle mb-3">Unsere Mission</h2>
+              <p class="hero-text">
+                Der Verein
+                <strong>Netzwerk Kleidungshilfe e.V.</strong> engagiert sich für
+                die Sammlung, Sortierung und Verteilung von Kleiderspenden an
+                Menschen in Krisen- und Notsituationen. Unser Ziel ist es,
+                schnell und unbürokratisch Hilfe zu leisten und zwar dort, wo es
+                wirklich zählt.Ihre Spende wird in der Geschäftsstelle
+                gesammelt, geprüft und anschließend an unsere
+                Partnerorganisationen in den Krisenregionen weitergeleitet.
+                gerne organisieren wir auch eine Abholung an Ihrer
+                Wunschadresse. Wir freuen uns auf Ihre Spende.
+              </p>
+            </div>
+
+            <!-- Bild -->
+            <div class="col-lg-5 d-none d-lg-block">
+              <img
+                src="../data/bild_verein.jpg"
+                alt="Kleiderspenden"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="container">
-        © Gemeinnütziger Verein –
-        <a href="pages/impressum-datenschutz.html">Impressum & Datenschutz</a>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            © Netzwerk Kleidungshilfe e.V. –
+            <a href="pages/impressum-datenschutz.html"
+              >Impressum & Datenschutz</a
+            >
+          </div>
+        </div>
       </div>
     </footer>
     <!-- Bootstrap JavaScript -->

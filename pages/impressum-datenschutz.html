@@ -20,11 +20,12 @@
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <img
-            src="../data/logo.svg"
-            alt="Netzwerk Kleidungshilfe"
-            class="logo"
-          />
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="../data/logo.svg"
+              alt="Netzwerk Kleidungshilfe"
+              class="logo"
+          /></a>
 
           <button
             class="navbar-toggler"
@@ -63,10 +64,12 @@
     </header>
 
     <main>
-      <div class="container">
-        <h1 class="my-4">Impressum & Datenschutz</h1>
-      </div>
-      <section id="start" class="py-5">
+      <section class="pt-4 mb-3">
+        <div class="container">
+          <h1>Impressum & Datenschutz</h1>
+        </div>
+      </section>
+      <section>
         <div class="container">
           <h2>Impressum</h2>
           <p>
@@ -99,8 +102,14 @@
 
     <footer>
       <div class="container">
-        © Gemeinnütziger Verein –
-        <a href="pages/impressum-datenschutz.html">Impressum & Datenschutz</a>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            © Netzwerk Kleidungshilfe e.V. –
+            <a href="pages/impressum-datenschutz.html"
+              >Impressum & Datenschutz</a
+            >
+          </div>
+        </div>
       </div>
     </footer>
     <!-- Bootstrap JavaScript -->

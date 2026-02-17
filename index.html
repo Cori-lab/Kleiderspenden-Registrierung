@@ -20,7 +20,8 @@
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <img src="data/logo.svg" alt="Netzwerk Kleidungshilfe" class="logo" />
+          <a class="navbar-brand" href="#">
+          <img src="data/logo.svg" alt="Netzwerk Kleidungshilfe" class="logo"/></a>
 
           <button
             class="navbar-toggler"
@@ -57,22 +58,24 @@
     </header>
 
     <main>
+<!-- Titelbereich -->
+ <section class="pt-4 mb-3">
       <div class="container">
-            <h1 class="my-4">Kleiderspenden-Registrierung</h1>
-          </div>
+        <h1>Kleiderspenden mit Sinn</h1>
+      </div>
+</section>
 
-      <section id="start" class="py-5">
+<!-- Einleitung -->
+      <section id="start" class="hero-intro">
         <div class="container">
           <div class="row align-items-top">
 
 <!-- Einleitungstext -->
           <div class="col-lg-7">
-              <h2 class="mb-4">Projektvorstellung</h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et
-                iusto perspiciatis eaque corporis, voluptatum qui minima maiores
-                saepe, sapiente, exercitationem culpa quo at adipisci neque
-                dolorum. Mollitia exercitationem voluptate quasi!
+            <h2 class="hero-subtitle mb-3">Spenden Sie Ihre Kleidung dorthin, wo sie <em>wirklich</em> gebraucht wird.</h2>
+              <p class="hero-text">
+                Mit dieser Anwendung können Sie Ihre Kleiderspende schnell und unkompliziert registrieren. Geben Sie einfach an, welche Kleidung Sie spenden möchten, wählen Sie ein Krisengebiet aus und entscheiden Sie, ob Sie die Spende selbst abgeben oder abholen lassen möchten.
+                So wird der Ablauf für Sie einfacher und die Hilfe kommt dort an, wo sie gebraucht wird.
               </p>
             </div>
 
@@ -85,9 +88,9 @@
         />
       </div>
 
-            </div>
-            </div>
-      </section>
+      </div>
+    </div>
+</section>
 
       <!-- Spendenformular -->
       <section id="spende" class="py-5">
@@ -285,7 +288,7 @@
                 </div>
               </div>
 
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-outline-primary">
               Registrierung abschließen
                 </button>
           </form>
@@ -301,7 +304,7 @@
             <div class="card shadow-sm border-0">
               <div class="card-body">
                 <h2 class="card-title text-success mb-4">Ihre Spende wurde erfolgreich registriert</h2>
-                <p class="text-muted mb-4">Vielen Dank für Ihre Spende! Die folgenden Daten wurden erfasst:</p>
+                <p class="text-muted mb-4"><strong>Vielen Dank für Ihre Spende! Die folgenden Daten wurden erfasst:</strong></p>
                 <p>
 
             <ul class="list-group list-group-flush mb-4">
@@ -339,7 +342,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-10">
-            © Gemeinnütziger Verein –
+            © Netzwerk Kleidungshilfe e.V. –
             <a href="pages/impressum-datenschutz.html"
               >Impressum & Datenschutz</a
             >
