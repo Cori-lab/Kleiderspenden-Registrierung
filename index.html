@@ -138,8 +138,8 @@
                       <label for="kleidung" class="form-label"
                         >Art der Kleidung</label
                       >
-                      <select id="kleidung" class="form-select">
-                        <option selected>Bitte auswählen</option>
+                      <select id="kleidung" class="form-select" required>
+                        <option value="" selected disabled>Bitte auswählen</option>
                         <option>Jacken</option>
                         <option>T-Shirts</option>
                         <option>Hemden</option>
@@ -168,7 +168,7 @@
                         >Krisengebiet</label
                       >
                       <select id="krisengebiete" class="form-select" required>
-                        <option selected>Bitte auswählen</option>
+                        <option value="" selected disabled>Bitte auswählen</option>
                       </select>
                     </div>
                   </div>
@@ -191,20 +191,35 @@
                       />
                     </div>
 
-                    <div class="mb-3">
-                      <label for="name" class="form-label"
-                        >Vor- und Nachname</label
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                      <label for="vorname" class="form-label"
+                        >Vorname</label
                       >
                       <input
                         type="text"
-                        id="name"
+                        id="vorname"
                         class="form-control"
-                        placeholder="Max Mustermann"
-                        maxlength="30"
+                        placeholder="Max"
+                        maxlength="20"
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label for="nachname" class="form-label"
+                        >Nachname</label
+                      >
+                      <input
+                        type="text"
+                        id="nachname"
+                        class="form-control"
+                        placeholder="Mustermann"
+                        maxlength="20"
                       />
                     </div>
                   </div>
                 </div>
+            </div>
 
                 <!-- Adressbereich -->
                 <div id="adressbereich" class="d-none">
@@ -212,19 +227,35 @@
                     <div class="card-body">
                       <h5 class="card-title mb-3">Abholadresse</h5>
 
-                      <div class="mb-3">
+                      <div class="row">
+                        <div class="col-md-8 mb-3">
                         <label for="strasse" class="form-label"
-                          >Straße und Hausnummer</label
+                          >Straße</label
                         >
                         <input
                           type="text"
                           class="form-control"
                           id="strasse"
-                          placeholder="Musterstraße 12"
+                          placeholder="Musterstraße"
                         />
                       </div>
 
-                      <div class="mb-3">
+                        <div class="col-md-4 mb-3">
+                        <label for="hausnr" class="form-label"
+                          >Hausnummer</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="hausnr"
+                          placeholder="13"
+
+                        />
+                      </div>
+                    </div>
+
+                      <div class="row">
+                        <div class="col-md-4 mb-3">
                         <label for="plz" class="form-label">Postleitzahl</label>
                         <input
                           type="text"
@@ -240,7 +271,7 @@
                         </div>
                       </div>
 
-                      <div class="mb-3">
+                      <div class="col-md-8 mb-3">
                         <label for="ort" class="form-label">Ort</label>
                         <input
                           type="text"
@@ -252,6 +283,7 @@
                     </div>
                   </div>
                 </div>
+              </div>
 
                 <button type="submit" class="btn btn-primary">
               Registrierung abschließen
@@ -278,15 +310,17 @@
                <li class="list-group-item">
                 <strong>Übergabeart:</strong> <span id="confirmUebergabe"></span></li>
               <li class="list-group-item">
-                <strong>Art der Kleidung:</strong><span id="confirmKleidung"></span></li>
+                <strong>Art der Kleidung: </strong><span id="confirmKleidung"></span></li>
               <li class="list-group-item">
                <strong>Anzahl:</strong> <span id="confirmAnzahl"></span></li>
              <li class="list-group-item">
-              <strong>Krisengebiet:</strong> <span id="confirmGebiet"></span></li>
+              <strong>Krisengebiet: </strong> <span id="confirmGebiet"></span></li>
             <li class="list-group-item">
               <strong>E-Mail:</strong> <span id="confirmEmail"></span></li>
             <li class="list-group-item">
-              <strong>Name:</strong> <span id="confirmName"></span></li>
+              <strong>Vorname:</strong> <span id="confirmVorname"></span></li>
+              <li class="list-group-item">
+              <strong>Nachname:</strong> <span id="confirmNachname"></span></li>
             <li class="list-group-item">
               <strong>Adresse:</strong> <span id="confirmAdresse"></span></li>
           </ul>
@@ -295,7 +329,6 @@
             Neue Spende registrieren
           </button>
 
-              </form>
             </div>
           </div>
         </div>

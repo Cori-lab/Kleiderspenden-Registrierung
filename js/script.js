@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const abholung = document.getElementById("abholung");
   const adressbereich = document.getElementById("adressbereich");
 
-  const nameInput = document.getElementById("name");
+  const vornameInput = document.getElementById("vorname");
+  const nachnameInput = document.getElementById("nachname");
   const emailInput = document.getElementById("email");
   const strasseInput = document.getElementById("strasse");
+  const hausnrInput = document.getElementById("hausnr");
   const plzInput = document.getElementById("plz");
   const ortInput = document.getElementById("ort");
   
@@ -30,16 +32,20 @@ document.addEventListener("DOMContentLoaded", function () {
     if (abholung.checked) {
       adressbereich.classList.remove("d-none");
 
-    nameInput.required = true;
+    vornameInput.required = true;
+    nachnameInput.required = true;
     strasseInput.required = true;
+    hausnrInput.required = true;
     plzInput.required = true;
     ortInput.required = true;
 
     } else {
       adressbereich.classList.add("d-none");
 
-    nameInput.required = false;
+    vornameInput.required = false;
+    nachnameInput.required = false;
     strasseInput.required = false;
+    hausnrInput.required = false;
     plzInput.required = false;
     ortInput.required = false;
     
@@ -75,13 +81,15 @@ fetch("data/krisengebiete.json")
     }
 
   // Formulardaten sammeln
-const kleidung = document.querySelector(".form-select").value;
-const anzahl = document.querySelector('input[type="number"]').value;
+const kleidung = document.getElementById("kleidung").value;
+const anzahl = document.getElementById("anzahl").value;
 const selectGebiet = document.getElementById("krisengebiete");
 const gebiet = selectGebiet.options[selectGebiet.selectedIndex].text;
-const name = sanitizer(document.getElementById("name").value);
+const vorname = sanitizer(document.getElementById("vorname").value);
+const nachname = sanitizer(document.getElementById("nachname").value);
 const email = sanitizer(document.getElementById("email").value);
 const strasse = sanitizer(document.getElementById("strasse").value);
+const hausnr = sanitizer(document.getElementById("hausnr").value);
 const plz = document.getElementById("plz").value;
 const ort = sanitizer(document.getElementById("ort").value);
 
@@ -99,7 +107,8 @@ document.getElementById("confirmGebiet").textContent = gebiet;
 document.getElementById("confirmKleidung").textContent = kleidung;
 document.getElementById("confirmAnzahl").textContent = anzahl;
 document.getElementById("confirmEmail").textContent = email;
-document.getElementById("confirmName").textContent = name || "nicht angegeben";
+document.getElementById("confirmVorname").textContent = vorname || "nicht angegeben";
+document.getElementById("confirmNachname").textContent = nachname || "nicht angegeben";
     
   // Adresse nur bei Abholung anzeigen
 if (abholung.checked) {
