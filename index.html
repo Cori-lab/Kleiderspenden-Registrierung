@@ -13,6 +13,8 @@
     <!-- Eigene Styledatei -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Kleiderspenden Registrierung</title>
+<!-- Favicon -->
+    <link rel="icon" type="image/png" href="data/favicon.png" />
   </head>
 
   <body>
@@ -74,8 +76,8 @@
           <div class="col-lg-7">
             <h2 class="hero-subtitle mb-3">Spenden Sie Ihre Kleidung dorthin, wo sie <em>wirklich</em> gebraucht wird.</h2>
               <p class="hero-text">
-                Mit dieser Anwendung können Sie Ihre Kleiderspende schnell und unkompliziert registrieren. Geben Sie einfach an, welche Kleidung Sie spenden möchten, wählen Sie ein Krisengebiet aus und entscheiden Sie, ob Sie die Spende selbst abgeben oder abholen lassen möchten.
-                So wird der Ablauf für Sie einfacher und die Hilfe kommt dort an, wo sie gebraucht wird.
+                Mit dieser Anwendung können Sie Ihre <strong>Kleiderspende schnell und unkompliziert</strong> registrieren. Geben Sie einfach an, welche Kleidung Sie spenden möchten, wählen Sie ein Krisengebiet aus und entscheiden Sie, ob Sie die Spende selbst abgeben oder abholen lassen möchten.
+                <strong>So wird der Ablauf für Sie einfacher und die Hilfe kommt dort an, wo sie gebraucht wird.</strong>
               </p>
             </div>
 
@@ -161,6 +163,7 @@
                         id="anzahl"
                         class="form-control"
                         min="1"
+                        max="99"
                         placeholder="Bitte eingeben"
                         required
                       />
@@ -328,7 +331,7 @@
               <strong>Adresse:</strong> <span id="confirmAdresse"></span></li>
           </ul>
 
-          <button type="button" id="neueSpende" class="btn btn-secondary mt-3">
+          <button type="button" id="neueSpende" class="btn btn-outline-primary">
             Neue Spende registrieren
           </button>
 
